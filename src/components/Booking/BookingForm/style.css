@@ -1,0 +1,14 @@
+.booking-form {
+    text-align: left;
+  }
+  
+  .booking-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .booking-form label {
+    font-weight: bold;
+  }
+  
