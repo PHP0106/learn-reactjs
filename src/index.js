@@ -7,6 +7,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './app/store';
 
+
+// const express = require('express');
+// const cors = require('cors');
+// const app = express();
+
+// app.use(cors());
+// app.listen(7001, () => {
+//   console.log('Server is running on port 7001');
+// });
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

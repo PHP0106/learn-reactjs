@@ -4,19 +4,23 @@ import BookingForm from './BookingForm';
 import BookingConfirmation from './BookingConfirmation';
 
 const BookingFeature = () => {
-    const [bookingData, setBookingData] = useState(null);
+    const [bookingId, setBookingId] = useState(null);
 
-    const handleBookingConfirmation = (data) => {
-        setBookingData(data);
+    const handleBookingConfirmation = (id) => {
+        setBookingId(id);
     };
 
     return (
-        <div className="booking-feature">
-            <h1>Đặt phòng khách sạn</h1>
-            {!bookingData ? (
+        <div className="booking-container">
+            <div className="booking-form-container">
+                <h2>Đặt phòng</h2>
                 <BookingForm onBookingConfirmation={handleBookingConfirmation} />
-            ) : (
-                <BookingConfirmation bookingData={bookingData} />
+            </div>
+            {bookingId && (
+                <div className="booking-confirmation-container">
+                    <h2>Xác nhận đặt phòng</h2>
+                    <BookingConfirmation bookingId={bookingId} />
+                </div>
             )}
         </div>
     );
